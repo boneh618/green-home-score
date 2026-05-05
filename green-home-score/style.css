@@ -1,40 +1,43 @@
 body {
-  margin: 0;
-  font-family: Arial;
-  background: #0f172a;
-  color: white;
-  text-align: center;
-}
-
-.hero {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  padding: 60px 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 .container {
-  padding: 30px;
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
 }
 
-form {
-  max-width: 400px;
-  margin: auto;
+h1 {
+    margin-bottom: 10px;
 }
 
-select, button {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border-radius: 8px;
-  border: none;
+form select, button {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
 }
 
 button {
-  background: #22c55e;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #66BB6A;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
