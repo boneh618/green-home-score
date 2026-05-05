@@ -1,63 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Green Home Score</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Green Home Score</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
+<div class="hero">
+  <h1>🏠 Green Home Score</h1>
+  <p>Find out how much money your home is wasting</p>
+</div>
+
 <div class="container">
-    <h1>🏠 Green Home Score</h1>
-    <p>Find out how efficient your home is</p>
 
-    <form id="form">
-        <select name="ac">
-            <option value="inverter">Inverter AC</option>
-            <option value="regular">Regular AC</option>
-            <option value="old">Old AC</option>
-        </select>
+  <form id="form">
 
-        <select name="heater">
-            <option value="solar">Solar Heater</option>
-            <option value="electric">Electric Heater</option>
-            <option value="gas">Gas</option>
-        </select>
+    <select name="ac">
+      <option value="inverter">Inverter AC</option>
+      <option value="regular">Regular AC</option>
+      <option value="old">Old AC</option>
+    </select>
 
-        <select name="fridge">
-            <option value="new">New Fridge</option>
-            <option value="old">Old Fridge</option>
-        </select>
+    <select name="heater">
+      <option value="solar">Solar Heater</option>
+      <option value="electric">Electric Heater</option>
+    </select>
 
-        <select name="lights">
-            <option value="led">LED</option>
-            <option value="regular">Regular</option>
-        </select>
+    <select name="fridge">
+      <option value="new">New Fridge</option>
+      <option value="old">Old Fridge</option>
+    </select>
 
-        <select name="insulation">
-            <option value="good">Good Insulation</option>
-            <option value="average">Average</option>
-            <option value="poor">Poor</option>
-        </select>
+    <select name="lights">
+      <option value="led">LED</option>
+      <option value="regular">Regular</option>
+    </select>
 
-        <select name="windows">
-            <option value="double">Double Glass</option>
-            <option value="single">Single Glass</option>
-        </select>
+    <select name="insulation">
+      <option value="good">Good Insulation</option>
+      <option value="poor">Poor</option>
+    </select>
 
-        <select name="habits">
-            <option value="good">Good Habits</option>
-            <option value="bad">Bad Habits</option>
-        </select>
+    <select name="windows">
+      <option value="double">Double Glass</option>
+      <option value="single">Single Glass</option>
+    </select>
 
-        <button type="submit">Calculate</button>
-    </form>
+    <select name="habits">
+      <option value="good">Good Habits</option>
+      <option value="bad">Bad Habits</option>
+    </select>
 
-    <div id="result" class="hidden">
-        <h2 id="score"></h2>
-        <p id="waste"></p>
-        <ul id="tips"></ul>
-    </div>
+    <button type="submit">Calculate Score</button>
+  </form>
+
+  <div id="result" class="hidden">
+    <h2 id="score"></h2>
+    <p id="waste"></p>
+    <ul id="tips"></ul>
+  </div>
+
 </div>
 
 <script src="script.js"></script>
