@@ -9,13 +9,11 @@ function calculateScore(data) {
   let score = 50;
   let suggestions = [];
 
-  if (data.ac === "inverter") score += 10;
   if (data.ac === "old") {
     score -= 10;
     suggestions.push("Upgrade AC → save ₪70/month");
   }
 
-  if (data.heater === "solar") score += 15;
   if (data.heater === "electric") {
     score -= 10;
     suggestions.push("Switch to solar heater → save ₪80/month");
@@ -49,7 +47,11 @@ function calculateScore(data) {
   score = Math.max(0, Math.min(100, score));
   const waste = (100 - score) * 5;
 
-  return { score, waste, suggestions: suggestions.slice(0, 3) };
+  res.json({
+    score,
+    waste,
+    suggestions: suggestions.slice(0, 3)
+  });
 }
 
 app.post("/score", (req, res) => {
@@ -57,4 +59,4 @@ app.post("/score", (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log("Server running on " + PORT));
+app.listen(PORT, () => console.log("Server running"));
